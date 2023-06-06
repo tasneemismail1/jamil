@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");//
-var session = require("express-session");
+var session = require('cookie-session');
 var bodyParser = require("body-parser");//
 const fileUpload = require("express-fileupload");
 
