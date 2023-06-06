@@ -1,5 +1,4 @@
 var express = require("express");
-var createError = require("http-errors");
 var router = express.Router();
 var app = express();
 var imgSchema = require("../model/product");

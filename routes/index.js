@@ -1,5 +1,4 @@
 var express = require("express");// require express
-var createError = require("http-errors");//errors
 var router = express.Router();
 const User = require("../model/user");//mode user schema
 
