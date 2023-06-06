@@ -30,6 +30,11 @@ const indexRouter = require("./routes/index");
 const viewRouter = require("./routes/views");
 const adminRouter = require("./routes/admin");
 
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect("mongodb+srv://malak2102056:56850906@cluster0.da8eto8.mongodb.net/jamila");
+  console.log("Connected With DB");
+}
 
 app.use("/user", indexRouter); //user
 app.use("/", viewRouter);
@@ -45,16 +50,10 @@ app.post("/logout", (req, res) => {
   res.redirect("/");
 });
 
-
-mongoose.connect("mongodb+srv://malak2102056:56850906@cluster0.da8eto8.mongodb.net/jamila")
-   .then((result) => {
-      
-      app.listen(5050);
-      console.log("connected to db");
-   })
-   .catch((e) => {
-      console.log(e)
-   })
-   
+const PORT = 5050;
+const hostname = "localhost";
+app.listen(PORT, hostname, () => {
+  console.log(`Server running at http://${hostname}:${PORT}/`);
+});
 
 module.exports = app;
