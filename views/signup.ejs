@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> sign up Form Validations</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/navsign.css">
+<body>
+    <section>
+        <%- include('./companents/nav.ejs') %>
+    </section>
+    <section>
+        <div class="showcase">
+            <div class="video-container">
+                <video src="images/signinvid.mp4" autoplay muted loop id="myvideo"
+                    style="background-size: cover;"></video>
+            </div>
+        </div>
+        <div class="signup-box">
+            <h2>Login</h2>
+            <div style="clear: both;font-size: large;color: white;"><%= token %></div>
+            <form>
+                <div class="user-box success">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                    <input type="text" id="FullName" name="FullName" required="">
+                    <label>First name</label>
+                    <small id="FullNameError"></small>
+                    <!-- ------------------------- ------------ -->
+                </div>
+                <div class="user-box success">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" id="email" name="email" required="">
+                    <label>Email</label>
+                    <small id="EmailError"></small>
+                </div>
+                <!-- ------------------------- ------------ -->
+                <div class="user-box success">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="password" name="password" required="">
+                    <label>Password</label>
+                    <small id="passwordError"></small>
+                </div>
+                <!-- ------------------------- ------------ -->
+                <div class="user-box success">
+                    <ion-icon name="lock-open-outline"></ion-icon>
+                    <input type="password" id="confirmpassword" name="confirmpassword" required="">
+                    <label>Confirm Password</label>
+                    <small id="passwordError"></small>
+                </div>
+                <!-- ------------------------- ------------ -->
+                <div class="register">
+                    <p>Already have an account? <a href="/signin" id="reglink">Log in</a></p>
+                </div>
+                <!-- <div class="forget">
+                    <label for=""><input type="checkbox">Remember Me    <a href="#" id="forgetlink">Forgot password</a></label>
+                </div> -->
+            </form>
+            <button type="submit" onclick="signup()" id="signin-btn-submit" class="signupbtn">Sign Up</button>
+        </div>
+    </section>
+    <script src="js/signup.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

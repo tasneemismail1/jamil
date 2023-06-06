@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/Dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" />
+</head>
+
+<body>
+    <%- include('./companents/sidebar.ejs') %>
+        <!------------- End Of Sidebar ------------->
+        <main>
+            <h1>Dashboard</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="insights">
+                <div class="sales">
+                    <span class="material-icons-sharp">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Sales</h3>
+                            <p>$25,024 </p>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>88%</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 hours</small>
+                </div>
+
+
+                <!------------- End Of Sales ------------->
+
+                <div class="Expenses">
+                    <span class="material-icons-sharp">equalizer</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Expenses</h3>
+                            <p>$12,024 </p>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>64%</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 hours</small>
+                </div>
+
+
+                <!------------- End Of Expenses ------------->
+
+
+                <div class="Income">
+                    <span class="material-icons-sharp">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Income</h3>
+                            <p>$13,000 </p>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>46%</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 hours</small>
+                </div>
+
+                <!------------- End Of Income ------------->
+
+            </div>
+            <!------------- End Of Insights ------------->
+
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Number</th>
+                            <th>payment</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dreamy Blusher</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Love cake bronzer</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>jamila lipstick</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>foundation101</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+
+
+
+
+        </main>
+
+        <!------------- End Of Main ------------->
+
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="admin">
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b>
+                                    <%= fullname.fullname %>
+                                </b></p>
+                            <small class="text-muted">Admin</small>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="images/Adham.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!------------- End Of Top ------------->
+
+
+            <div class="recent-updates">
+                <div class="updates">
+                    <h2>Order-Details</h2>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="images/Areej.png" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Areej Ahmed </b> recieved her order of Night lion tech GPS drone.</p>
+                            <small class="text-muted">3 Minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="images/Shahd1.png" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Shahd Tamer </b> declined her order of 2 DJI Air 2S.</p>
+                            <small class="text-muted">5 Minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="images/Shahd2.png" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>shahd Ibrahim </b> recieved her order of LARVENDER KF102 Drone.</p>
+                            <small class="text-muted">1 Minute ago</small>
+                        </div>
+                    </div>
+                    <!-- <div class="update">
+                        <div class="profile-photo">
+                            <img src="Malak.png" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Malak Helal </b> recieved her order of Night lion tech GPS drone.</p>
+                            <small class="text-muted">3 Minutes ago</small>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+
+
+            <!------------- End Of Recent Updates ------------->
+
+            <div class="sales-analytics">
+                <h2>Sales Analytics</h2>
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-icons-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>ONLINE ORDERS</h3>
+                            <small class="text-muted">Last 24 hours</small>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                        <h3>3849</h3>
+
+                    </div>
+                </div>
+
+                <div class="item offline">
+                    <div class="icon">
+                        <span class="material-icons-sharp">local_mall</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>OFFLINE ORDERS</h3>
+                            <small class="text-muted">Last 24 hours</small>
+                        </div>
+                        <h5 class="danger">-17%</h5>
+                        <h3>1100</h3>
+
+                    </div>
+                </div>
+
+                <div class="item customers">
+                    <div class="icon">
+                        <span class="material-icons-sharp">person</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>NEW CUSTOMERS</h3>
+                            <small class="text-muted">Last 24 hours</small>
+                        </div>
+                        <h5 class="success">+25%</h5>
+                        <h3>849</h3>
+
+                    </div>
+                </div>
+
+                <div class="item add-product">
+                    <a href="/admin/addproduct">
+                        <span style="float: left;" class="material-icons-sharp">add</span>
+                        <h3 style="float: left;">Add Product</h3>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+<script src="js/Dashboard.js"></script>
+
+</html>
