@@ -50,7 +50,7 @@ app.post("/logout", (req, res) => {
   res.redirect("/");
 });
 
-const PORT = 3000;
+const PORT = 5050;
 const hostname = "localhost";
 app.listen(PORT, hostname, () => {
   console.log(`Server running at http://${hostname}:${PORT}/`);
