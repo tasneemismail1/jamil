@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");//
-var session = require('cookie-session');
+var session = require("express-session");
 var bodyParser = require("body-parser");//
 const fileUpload = require("express-fileupload");
 
@@ -50,7 +50,7 @@ app.post("/logout", (req, res) => {
   res.redirect("/");
 });
 
-const PORT = 5050;
+const PORT = 3000;
 const hostname = "localhost";
 app.listen(PORT, hostname, () => {
   console.log(`Server running at http://${hostname}:${PORT}/`);
